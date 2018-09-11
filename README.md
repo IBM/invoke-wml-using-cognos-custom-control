@@ -18,7 +18,7 @@ After going through this code pattern, you should be able to:
 
 ## Flow
 
-![WRML_Cognos](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/RWML_Arch.png)
+![WRML_Cognos](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images/RWML_Arch.png)
 
 1. Create the forms using js and charts using D3js.
 2. Create Watson Machine Learning or the predictive Model.
@@ -77,32 +77,33 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 - Launch watson studio
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/launch_WS.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images/launch_WS.png)
 
 - Create a new Watson Studio project.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/ws_newProj.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images/ws_newProj.png)
 
 By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
 
 - Define the project by giving a Name and hit 'Create'.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/define_project.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images/define_project.png)
+https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images
 
 - Once a project is created click on 'assets' tab.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/WS_Assets.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images/WS_Assets.png)
 
 - Under modeler flow click on new model, create a watson machine learning model to predict customer churn.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images/modeller.png)
 
 - Select model type as 'sample model' radio button
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images/sample_wml_model.png)
 
 - You created and saved the model. It's time to deploy it. Fromthe deployment tab, click on 'Add to deployment' and select deployment type as 'web service'.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/add_to_deploy.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images/add_to_deploy.png)
 
 
 
