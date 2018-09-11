@@ -84,14 +84,13 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/ws_newProj.png)
 
-By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
+By creating a project in Watson Studio a free tier ```Object Storage``` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
 
-- Define the project by giving a Name and hit 'Create'.
+- Define the project by giving a Name and hit ```Create```.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/define_project.png)
-https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images
 
-- Once a project is created click on 'assets' tab.
+- After the project creation click on ```assets``` tab.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/WS_Assets.png)
 
@@ -99,7 +98,7 @@ https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/images
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
 
-- Select model type as 'sample model' radio button
+- Select model type as ```sample model``` radio button
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
 
 - You created and saved the model. It's time to deploy it. Fromthe deployment tab, click on 'Add to deployment' and select deployment type as 'web service'.
