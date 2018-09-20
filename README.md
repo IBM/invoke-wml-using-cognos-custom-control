@@ -271,9 +271,6 @@ Note: Module path will be pointing to the javascripts files that was created for
 
 
 
-To specify how you want the control to interact with the report, click the UI type property.
-If you do not want to render an interface, set the property to None. If you do not want events, such as mouseup, to propagate from the control to the report, set the property to UI without event propagation. If you want events to propagate to the report, set the property to UI with event propagation. In this pattern,we would select ```UI without event propagation```
-
 - save and run the report.
 
 - In order for you to get get the output of the watson machine learning model, all you have to do is just fill the form with required input parameters and click on submit button.
