@@ -85,21 +85,19 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 ### 1. Create watson machine learning model from Watson Studio
 
-- [Create watson studio](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data – all in a flexible, hybrid cloud environment.
+[Create watson studio](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data. All in a flexible, hybrid cloud environment.
 
-* Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
+- Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
 
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/WatsonStudioCreate.png)
 
 By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
 
-* Click on ```Get started``` button to launch watson studio
+- Click on ```Get started``` button to launch watson studio
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/WS_GetStarted.png)
 
-
-![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/launch_WS.png)
 
 - Create a new Watson Studio project.
 
@@ -126,7 +124,7 @@ By creating a project in Watson Studio a free tier ``Object Storage`` service wi
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/add_to_deploy.png)
 
-### Get WML Credentials and model API code
+### 2. Get WML Credentials and model API code
 
 - Once deployment completed, Copy the watson machine learning credentials:
 
@@ -170,7 +168,7 @@ Sample credentials as follows:
 
 
 
-### Host the WML model through node application
+### 3. Host the WML model through node application
 
 As shown in previous step, we have got the Javascript implementation of WML REST API. To avoid CORS error, we deployed WML API  as a node app. Node application code is available at `<//code location>`. Perform the following steps to deploy this node application.
 
@@ -260,7 +258,7 @@ If you do not want to render an interface, set the property to None. If you do n
 ```screenshot```
 
 
-### 5. Analyse the invoked machine learning model
+### 6. Analyse the invoked machine learning model
 
 - From the one single cognos dashboard, now we will be able to see the insights of the data through dataware house and along with that we can now do predictions by invoking dynamically watson machine learning models and display the output if the model on the dashboard.
 
