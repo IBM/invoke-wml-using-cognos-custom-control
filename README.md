@@ -206,9 +206,8 @@ Create the custom control widget using Javascript. The custom control developed 
 
 In this repository, custom control code is available at `<code location with file name`. Update the URL in `js file` as shown and save the file.
 
-  ```
-  ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom-control-API.png
-  ```
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom-control-API.png)
+  
 Here, please write the name of your node application deployed in previous step. For example, `aaa-bbb.mybluemix.net`
 
 ### 5. Build cognos report and import custom widget
@@ -263,15 +262,22 @@ Note: Module path will be pointing to the javascripts files that was created for
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/cc_prop.png)
 
--  To set the full interactivity of the report, then go to Pages tab, click on `Report` as per below screenshot and set it as `Yes`. 
+-  To set the full interactivity of the report, then go to Pages tab, click on `Report` as per below screenshot and on the properties window ensure the `Run with full interactivity` is set to `Yes`. 
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/run_full_interactivity.png)
 
--  
+-  Go to report page again, add a list object to the report and then add required fields to the list. See below screenshot for reference. 
 
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/SampleList.png)
 
+- Also add a Rave packed bubble chart visualization to the report and add data items to those visualizations widget to get some insights of the data. See screenshot for details.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/rave_viz.png)
 
 - save and run the report.
+
+
+### 6. Analyse the invoked machine learning model
 
 - In order for you to get get the output of the watson machine learning model, all you have to do is just fill the form with required input parameters and click on submit button.
 ```Screenshot```
@@ -281,9 +287,6 @@ Note: Module path will be pointing to the javascripts files that was created for
 
 - At run time, along with the input form you will now see the output of the watson machine from cognos application itself.
 ```screenshot```
-
-
-### 6. Analyse the invoked machine learning model
 
 - From the one single cognos dashboard, now we will be able to see the insights of the data through dataware house and along with that we can now do predictions by invoking dynamically watson machine learning models and display the output if the model on the dashboard.
 
