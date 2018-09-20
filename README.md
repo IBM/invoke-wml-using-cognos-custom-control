@@ -223,8 +223,6 @@ eg: "c:\Program Files\IBM\cognos\analytics\webcontent\samples\javascript\wml\
  
  ```Note:``` 
  Create the folder by name ```wml``` for this pattern under javaScript directory.
- 
- 
 
 - Launch cognos through url in the browser(preferred browsers are google chrome or mozilla firefox).
  sample url as follows:
@@ -242,10 +240,27 @@ eg: "c:\Program Files\IBM\cognos\analytics\webcontent\samples\javascript\wml\
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/createreport.png)
 
+- Cognos will pop up to select the available templates. Pick the blank template and clock open. See below screenshot.
 
-- Click on ```+ New button``` to open a new report studio report.
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/report_template.png)
 
--  To add a custom control, from the toolbox toolbox icon, drag the Custom control icon custom control icon to the report.
+- Click on source tab to see the meta data of the data set
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/source_data_tab.png)
+
+- Select Page1 to start adding custom widgets to the cognos report
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/selectPage1.png)
+
+-  Add a custom control from the toolbox icon, drag the custom control icon to the report. See below screenshot.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_drag.png)
+
+- Now add the properties as per the below screenshot.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/cc_prop.png)
+
+-  
 Select the custom control and click the Show properties icon Show properties icon.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_tool.png)
