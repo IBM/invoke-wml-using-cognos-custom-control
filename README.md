@@ -75,7 +75,7 @@ Will be uploaded shortly.
 ## Steps
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
 
-1. [Create watson machine learning model from Watson Studio](#2-create-watson-machine-learning-model-from-watson-studio)
+1. [Create watson machine learning model from Watson Studio](#1-create-watson-machine-learning-model-from-watson-studio)
 2. [Get WML Credentials and model API code](#2-get-wml-credentials-and-model-api-code)
 3. [Host the WML model through node application](#3-host-the-wml-model-through-node-application)
 4. [Create custom control widgets](#4-create-custom-control-widgets)
