@@ -1,31 +1,41 @@
-# invoke-wml-using-cognos-custom-control
+# Invoke Watson Machine Learning Model and Display model output at run time on Cognos Dashboard
 ***Work In Progress***
 
-It is always a tedious task to see a real time Watson Machine Learning(wml) model output from Cognos application. 
-To achieve that, we then need to have an external mechanism to invoke the model, pass the required input parameters and finally the scores are written back to the database. Cognos reads the latest scores from the database and displays on the dashboard. This is a little tedious process of displaying the machine learning model outputs at run time.
+Cognos 11 is not only positioned towards the professional report author but specifically towards power users and data scientists by offering Watson-like features such as natural language search and automatic proposal of charts. Now with all these latest features in cognos, interacting or communicating with cloud hosted services is also possible from the cognos application.
+
+It was always a tedious task to display a real time Watson Machine Learning(WML) model output from Cognos application. 
+To achieve that, we need to have an external mechanism to invoke the model, pass the required input parameters and finally the scores are written back to the database. Cognos reads the latest scores from the database and displays on the dashboard.
 
 The latest version of Cognos comes with Custom control feature. It gives the capability to create a real time dashboard where we can pass the inputs through a custom widget which internally invokes the model through REST API, gets the output and displays on the dashboard.
 
-For this, one need to build a custom widget using Java Script to get inputs and to show outputs as d3 chart. Then this widget can be imported into Cognos dashboard and gets real time output.
-In this pattern, we will demonstrate to build custom widget, integration of the custom widget in Cognos and to invoke the Machine learning model from the Cognos Dashboard.
-The dataset considered here is Telecom sample customer data, using that data we Predict behaviour to retain the customers. You can analyse all relevant customer data and develop focused customer retention programs.
-For this, one need to build a custom widget using Java Script to get inputs and to show outputs as [d3 chart](https://d3js.org/). Then this widget can be imported into Cognos dashboard and gets real time output.
+For this, one need to build a custom control using Java Script to get inputs and to show outputs as chart/table. Then this control can be imported into Cognos dashboard and gets real time output. In this pattern, we demonstrate to build custom control, integration of the custom control in Cognos, invoke the Machine learning model from the Cognos Dashboard and show model output at run time on Cognos Dashboard.
 
-After going through this code pattern, you should be able to:
-- create a real time dashboard using cognos custom control.
-- can invoke machine learning or predictive models hosted on cloud.
-- can import the external java script build charts to cognos application.
+The dataset considered for this pattern is `Sample Customer Data in Telecom Domain`. Using the dataset, the behaviour to retain the customers is predicted. You can analyse all relevant customer data and develop focused customer retention programs.
+
+**Use case**
+
+Customer churn occurs when customers or subscribers stop doing business with a company or service, also known as customer attrition. It is also referred as loss of clients or customers. One industry in which churn rates are particularly useful is the telecommunications industry, because most customers have multiple options from which to choose within a geographic location.
+
+Using this kind of data and with the help of watson machine learning model output, you will be able to predict the most likely churn customers(telecom customers) from the cognos dashboard and by taking appropriate actions (such as giving offers and needful service) will decrease the churn rate and prevent customer attrition. In other words we would be able to identify which customers are at risk of loosing?
+
+> The data file in the `data` directory - `Telco-Customer-Churn.csv` has been downloaded from [here](https://www.kaggle.com/blastchar/telco-customer-churn) .
+
+When the reader has completed this code pattern, one will be able to:
+- create a real time dashboard using Cognos custom control.
+- import the external java script to Cognos reports.
+- invoke machine learning models hosted on cloud through REST API from Cognos.
+ 
 
 ## Flow
 
 ![WRML_Cognos](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/RWML_Arch.png)
 
-1. Create the forms using js and charts using D3js.
-2. Create Watson Machine Learning or the predictive Model.
-3. Launch Cognos either on Google chrome or mozilla firefox.
-4. From the cognos dashboard, pass the input parameters in the form and click submit button.
-5. Invokes ML models based on the input paramaeters.
-6. Gets output from the model and sends to the cognos dashboard to display
+1. Create the custom control widget using Javascript.
+2. Create Watson Machine Learning Model and deploy as web service.
+3. Launch Cognos on web browser.
+4. Create the Cognos report using Custom Control and run the report.
+5. Report invokes WML model based on the input paramaeters.
+6. Gets output from the WML model and displays on the Cognos dashboard. Dashboard gets updated with real time WML model output.
 
 
 # Included Components
@@ -40,42 +50,37 @@ After going through this code pattern, you should be able to:
 
 * [d3js](https://d3js.org/) - Develop charts like pie, bar, or some fancy charts sunburst etc which can later be imported to cognos application.
 
-* Cognos (version 11.0.11) BI server - On Prim version of Cognos.
+* Cognos BI server - On Prim version of Cognos or SaaS offering.
 
 ## Featured Technologies
-
-* [D3js](https://d3js.org/):  
+ 
 * [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
+
 * [Cognos Analytics](https://www.computerworld.com/article/2906336/emerging-technology/what-is-artificial-intelligence.html):  
 
 ## Watch The Video
 
 Will be uploaded shortly.
 
+## Pre-requisites
 
+* Cognos server - You can have on-prim or SaaS offering of Cognos with admin access.
+ > Note: Cognos version should be over 11.0.05.
+
+* IBM Cloud account: You must have IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, please create an account [here](https://console.bluemix.net/)
 
 ## Steps
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
-1. [Pre-requisites](#1-pre-requisites)
-2. [Create watson machine learning model](#2-create-watson-machine-learning-model)
-3. [Create custom control widgets](#3-create-custom-control-widgets)
-4. [Build cognos report and import custom widget](#4-build-cognos-report-and-import-custom-widget)
-5. [Analyse the invoked machine learning model](#5-analyse-the-invoked-machine-learning-model)
+1. Create watson Studio service url 
+2. [Create watson machine learning model](#1-create-watson-machine-learning-model)
+3. [Get WML Credentials and model API code]
+4. [Host the WML model through node application]
+5. [Create custom control widgets](#3-create-custom-control-widgets)
+5. [Build cognos report using custom widget](#4-build-cognos-report-and-import-custom-widget)
+6. [Run the report and Analyse the results](#5-analyse-the-invoked-machine-learning-model) 
 
 
-
-
-## 1. Pre-requisites
-
-- Admin access to cognos 11.0.11 server to place javascript files to the cognos webcontent folder.
-
-- IBM Cloud account: You must have IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, you can create a one month free trail account [here](https://console.bluemix.net/)
-
-
-
-## 2. Create watson machine learning model
-
-- Sign up for IBM's [Watson Studio](http://dataplatform.ibm.com/)
+### 2. Create watson machine learning model
 
 - Launch watson studio
 
@@ -99,12 +104,14 @@ By creating a project in Watson Studio a free tier ``Object Storage`` service wi
 
 ![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
 
-- Select model type as 'sample model' radio button
+- We have used sample model for this pattern, select model type as 'sample model' radio button
 ![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
 
 - You created and saved the model. It's time to deploy it. From the deployment tab, click on 'Add to deployment' and select deployment type as 'web service'.
 
 ![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/add_to_deploy.png)
+
+### Get WML Credentials and model API code
 
 - Once deployment completed, Copy the watson machine learning credentials:
 
@@ -112,6 +119,7 @@ There are two ways to look up Watson Machine Learning service credentials, depen
 
 IBM Watson Studio
 IBM Cloud
+
 
  
 ```Option 1: From Watson Studio```
@@ -146,23 +154,51 @@ Sample credentials as follows:
 
 
 
-### Use case details: 
-Customer churn occurs when customers or subscribers stop doing business with a company or service, also known as customer attrition. It is also referred as loss of clients or customers. One industry in which churn rates are particularly useful is the telecommunications industry, because most customers have multiple options from which to choose within a geographic location.
-Using this kind of data and with the help of watson machine learning model output, you will be able to predict the most likely churn customers from the cognos dashboard and by taking appropriate actios(such as giving offers and needful service) will decrease the churn rate and prevent customer attrition.
-Contract is the most important variable to predict customer churn or not churn.
 
-> The data file in the `data` directory - `Telco-Customer-Churn.csv` has been downloaded from [here](https://www.kaggle.com/blastchar/telco-customer-churn) .
+### Host the WML model through node application
 
+As shown in previous step, we have got the Javascript implementation of WML REST API. To avoid CORS error, we deployed WML API  as a node app. Node application code is available at `<//code location>`. Perform the following steps to deploy this node application.
 
+ * Get the code
+ * Change the directory.
+   ``` 
+   cd <directory>
+   ```
+ * Update the `WML credentials` in `app.js` as shown:
+   ```
+   <screen shot>
+   ```
+ * Update `scoring_url` in `app.js` as shown:
+   ```
+   <screenshot>
+   ```
+ * Push the application on IBM Cloud.
+   ```
+   bx cf push <unique name of application>
+   ```
+ * Get the application URL to be used in next step.
+   ```
+   snapshot
+   ```
+ 
 
-## 3. Create custom control widgets
+### 4. Create custom control widgets
 
-- Using java script create the custom control widgets(here in our pattern, we have created a form to input the model required parameters).
+Create the custom control widget using Javascript. The custom control developed for this pattern: 
 
-- Using d3 create pie chart. In this pattern we created pie chart which shows the model output confidence score in percentage.
+  * asks to provide the value of required parameters as an input for the WML model.
+  * calls REST API which in-turn invokes WML model using the provided input parameters.
+  * API sends response back to custom control in Cognos.
+  * parses the output (confidence score) and display as a d3 pie chart on Cognos Dashboard. 
 
+In this repository, custom control code is available at `<code location with file name`. Update the URL in `js file` as shown and save the file.
 
-## 4. Build cognos report and import custom widget
+  ```
+  show rest api path - scrrenshot
+  ```
+Here, please write the name of your node application deployed in previous step. For example, `aaa-bbb.mybluemix.net`
+
+### 5. Build cognos report and import custom widget
 
 - Place the custom widget related java script files [report.js](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/src/report.js) and [report.css](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/src/report.css) in the cognos installation webcontent directory.
 
@@ -209,7 +245,7 @@ If you do not want to render an interface, set the property to None. If you do n
 ```screenshot```
 
 
-## 5. Analyse the invoked machine learning model
+### 5. Analyse the invoked machine learning model
 
 - From the one single cognos dashboard, now we will be able to see the insights of the data through dataware house and along with that we can now do predictions by invoking dynamically watson machine learning models and display the output if the model on the dashboard.
 
@@ -230,10 +266,7 @@ If you do not want to render an interface, set the property to None. If you do n
 With this pattern now we can avoid tedious process of invoking the watson machine learning models on the fly and get the output of those models displayed on the fly.
 
 
-Throughout the analysis, we have learned several important things:
-1. Features such as tenure_group, Contract, PaperlessBilling, MonthlyCharges and InternetService appear to play a role in customer churn.
-2. There does not seem to be a relationship between gender and churn.
-3. Customers in a month-to-month contract, with PaperlessBilling and are within 12 months tenure, are more likely to churn; On the other hand, customers with one or two year contract, with longer than 12 months tenure, that are not using PaperlessBilling, are less likely to churn.
+
 
 
 ## Links
@@ -242,7 +275,7 @@ Throughout the analysis, we have learned several important things:
 
 
 
-# Learn More
+## Learn More
 - [IBM Cognos Custom Widgets](https://www.ibm.com/support/knowledgecenter/en/SSEP7J_11.0.0/com.ibm.swg.ba.cognos.ag_manage.doc/c_ca_add_db_widgets.html).
 
 - [adding javascript to cognos](https://www.ibm.com/support/knowledgecenter/en/SSEP7J_11.0.0/com.ibm.swg.ba.cognos.ug_cr_rptstd.doc/t_rpting_add_javascrpt.html)
