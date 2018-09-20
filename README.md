@@ -75,12 +75,12 @@ Will be uploaded shortly.
 ## Steps
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
 
-1. [Create watson machine learning model](#2-create-watson-machine-learning-model)
-2. [Get WML Credentials and model API code](#3-get-wml-credentials-and-model-api-code)
-3. [Host the WML model through node application](#4-host-the-wml-model-through-node-application)
-4. [Create custom control widgets](#5-create-custom-control-widgets)
-5. [Build cognos report using custom widget](#6-build-cognos-report-and-import-custom-widget)
-6. [Run the report and Analyse the results](#7-analyse-the-invoked-machine-learning-model) 
+1. [Create watson machine learning model from Watson Studio](#2-create-watson-machine-learning-model-from-watson-studio)
+2. [Get WML Credentials and model API code](#2-get-wml-credentials-and-model-api-code)
+3. [Host the WML model through node application](#3-host-the-wml-model-through-node-application)
+4. [Create custom control widgets](#4-create-custom-control-widgets)
+5. [Build cognos report using custom widget](#5-build-cognos-report-using-custom-widget)
+6. [Run the report and Analyse the results](#6-run- the-report-and-analyse-the-results) 
 
 
 
@@ -164,9 +164,6 @@ Sample credentials as follows:
   "username": "7ab12e8-xxx-yyyy-xxxx-123456789
 }
 ```
-
-
-
 
 
 ### 3. Host the WML model through node application
@@ -291,6 +288,7 @@ From cognos report, you can view insights of the Telecom data set and along with
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/form_wml.png)
 
 - Cognos will notify you saying ```Invoking watson machine learning model```. Click on ok.
+
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/invoke_popup.png)
 
 
