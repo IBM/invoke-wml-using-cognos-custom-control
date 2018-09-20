@@ -217,19 +217,27 @@ Here, please write the name of your node application deployed in previous step. 
 
 Path as follows
 ```
-<Cognos installation directory>\samples\JavaScript\wml\report.js
+<Cognos installation directory>\samples\javascript\wml\
+eg: "c:\Program Files\IBM\cognos\analytics\webcontent\samples\javascript\wml\
  ```
  
  ```Note:``` 
  Create the folder by name ```wml``` for this pattern under javaScript directory.
  
  
- 
 
-- Launch cognos through url in the browser(preferred browsers are google cgrome and mozilla firefox).
+- Launch cognos through url in the browser(preferred browsers are google chrome or mozilla firefox).
  sample url as follows:
+ ```
  http://Cognos_Server_IP:port/bi/?perspective=home
- 
+ ```
+
+- Click on ```+ New button``` to upload the `Telco-Customoer-Churn` data set to cognos server. See screenshot for details.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/uploadcsv.png
+
+Browse to upload the [Telco-customer-churn]() csv file which you have downloaded to your local system
+
 - Click on ```+ New button``` to open a new report studio report.
 
 -  To add a custom control, from the toolbox toolbox icon, drag the Custom control icon custom control icon to the report.
