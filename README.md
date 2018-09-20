@@ -80,7 +80,7 @@ Follow these steps to setup and run this code pattern. The steps are described i
 3. [Host the WML model through node application](#3-host-the-wml-model-through-node-application)
 4. [Create custom control widgets](#4-create-custom-control-widgets)
 5. [Build cognos report using custom widget](#5-build-cognos-report-using-custom-widget)
-6. [Run the report and Analyse the results](#6-run- the-report-and-analyse-the-results) 
+6. [Run the report and Analyse the results](#6-run-the-report-and-analyse-the-results) 
 
 
 
@@ -208,7 +208,7 @@ In this repository, custom control code is available at `<code location with fil
   
 Here, please write the name of your node application deployed in previous step. For example, `aaa-bbb.mybluemix.net`
 
-### 5. Build cognos report and import custom widget
+### 5. Build cognos report using custom widget
 
 - Place the custom widget related java script files [report.js](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/src/report.js) and [report.css](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/src/report.css) in the cognos installation webcontent directory.
 
@@ -275,7 +275,7 @@ Note: Module path will be pointing to the javascripts files that was created for
 - save the report under Team Content or My content by creating a folder and name it as `Invoking Watson Machine Learning Model from Cognos Dashboard`.
 
 
-### 6. Analyse the invoked machine learning model
+### 6. Run the report and Analyse the results
 
 From cognos report, you can view insights of the Telecom data set and along with that we can now dynamically invoke the machine learning model and get the scores or results instantly. 
 
