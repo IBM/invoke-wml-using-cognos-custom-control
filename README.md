@@ -279,7 +279,7 @@ Note: Module path will be pointing to the javascripts files that was created for
 
 ### 6. Analyse the invoked machine learning model
 
-From cognos report, you can view insights of the Telecom data set and along with that we now dynamically invoke the machine learning model and get the scores or results instantly. 
+From cognos report, you can view insights of the Telecom data set and along with that we can now dynamically invoke the machine learning model and get the scores or results instantly. 
 
 - Run the saved report in `html` format ONLY. See screenshot for reference.
 
@@ -298,16 +298,14 @@ From cognos report, you can view insights of the Telecom data set and along with
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/output_wml.png)
 
 
-- From the one single cognos dashboard, now we will be able to see the insights of the data through dataware house and along with that we can now do predictions by invoking dynamically watson machine learning models and display the output if the model on the dashboard. For the data that we passed in this scenario, we could see that the customer is most likey to churn based on the input parameters. Chances are high that this customer is likely to churn. So, the telco subscripber can now offer some good deals to that particular or set of customers who fall in the same category and try to retain them in future.
+- From the one single cognos dashboard, now we will be able to see the insights of the data through dataware house and along with that we can now do predictions by invoking dynamically watson machine learning models and display the output if the model on the dashboard. For the data that we passed in this scenario, we could see that the customer is most likey to churn based on the input parameters. Chances are high that this customer is likely to churn. So, the telco subscriber can now offer some good deals to that particular or set of customers who fall in the same category and try to retain them in future.
 Overall output of the report will look as below screen shot.
 
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/Report_Output.png)
 
-- 
 
-
-With this pattern now we can avoid tedious process of invoking the watson machine learning models on the fly and get the output of those models displayed on the fly.
+With this pattern now we can avoid tedious process of invoking the watson machine learning models at real time and get the output of those models displayed on the fly.
 
 
 
