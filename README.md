@@ -207,7 +207,7 @@ Create the custom control widget using Javascript. The custom control developed 
 In this repository, custom control code is available at `<code location with file name`. Update the URL in `js file` as shown and save the file.
 
   ```
-  show rest api path - scrrenshot
+  ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom-control-API.png
   ```
 Here, please write the name of your node application deployed in previous step. For example, `aaa-bbb.mybluemix.net`
 
