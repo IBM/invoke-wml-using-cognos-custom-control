@@ -89,6 +89,9 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
 
+
+![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/WatsonStudioCreate.png)
+
 By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
 
 ![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/launch_WS.png)
