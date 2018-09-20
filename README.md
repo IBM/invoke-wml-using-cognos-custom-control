@@ -56,7 +56,9 @@ When the reader has completed this code pattern, one will be able to:
  
 * [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
 
-* [Cognos Analytics](https://www.computerworld.com/article/2906336/emerging-technology/what-is-artificial-intelligence.html):  
+* [Watson Analytics](https://www.ibm.com/watson-analytics)
+
+* [Business intelligence (BI)](https://www.gartner.com/it-glossary/business-intelligence-bi/) is a technology-driven process for analyzing data and presenting actionable information to help executives, managers and other corporate end users make informed business decisions.
 
 ## Watch The Video
 
@@ -71,18 +73,23 @@ Will be uploaded shortly.
 
 ## Steps
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
-1. Create watson Studio service url 
-2. [Create watson machine learning model](#1-create-watson-machine-learning-model)
-3. [Get WML Credentials and model API code]
-4. [Host the WML model through node application]
-5. [Create custom control widgets](#3-create-custom-control-widgets)
-5. [Build cognos report using custom widget](#4-build-cognos-report-and-import-custom-widget)
-6. [Run the report and Analyse the results](#5-analyse-the-invoked-machine-learning-model) 
+1. [Create a new Watson Studio project](#1-create-a-new-watson-studio-project) 
+2. [Create watson machine learning model](#2-create-watson-machine-learning-model)
+3. [Get WML Credentials and model API code](#3-get-wml-credentials-and-model-api-code)
+4. [Host the WML model through node application](#4-host-the-wml-model-through-node-application)
+5. [Create custom control widgets](#5-create-custom-control-widgets)
+6. [Build cognos report using custom widget](#6-build-cognos-report-and-import-custom-widget)
+7. [Run the report and Analyse the results](#7-analyse-the-invoked-machine-learning-model) 
 
 
-### 2. Create watson machine learning model
 
-- Launch watson studio
+### 2. Create watson machine learning model from Watson Studio
+
+- [Launch watson studio](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data – all in a flexible, hybrid cloud environment.
+
+Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
+
+By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
 
 ![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/launch_WS.png)
 
