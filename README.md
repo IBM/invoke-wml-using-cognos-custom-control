@@ -28,7 +28,7 @@ When the reader has completed this code pattern, one will be able to:
 
 ## Flow
 
-![WRML_Cognos](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/RWML_Arch.png)
+![WRML_Cognos](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/RWML_Arch.png)
 
 1. Create the custom control widget using Javascript.
 2. Create Watson Machine Learning Model and deploy as web service.
@@ -90,36 +90,36 @@ Follow these steps to setup and run this code pattern. The steps are described i
 Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
 
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/WatsonStudioCreate.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/WatsonStudioCreate.png)
 
 By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/launch_WS.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/launch_WS.png)
 
 - Create a new Watson Studio project.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/ws_newProj.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/ws_newProj.png)
 
 By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
 
 - Define the project by giving a Name and hit 'Create'.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/define_project.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/define_project.png)
 
 - Once a project is created click on 'assets' tab.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/WS_Assets.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/WS_Assets.png)
 
 - Under modeler flow click on new model, create a watson machine learning model to predict customer churn.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
 
 - We have used sample model for this pattern, select model type as 'sample model' radio button
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
 
 - You created and saved the model. It's time to deploy it. From the deployment tab, click on 'Add to deployment' and select deployment type as 'web service'.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/add_to_deploy.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/add_to_deploy.png)
 
 ### Get WML Credentials and model API code
 
@@ -232,12 +232,12 @@ Path as follows
 -  To add a custom control, from the toolbox toolbox icon, drag the Custom control icon custom control icon to the report.
 Select the custom control and click the Show properties icon Show properties icon.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_tool.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_tool.png)
 
 - To specify the location of the file that contains the JavaScript that you want to use for the control, click the Module path property and to add JSON that configures the custom control, click the Configuration property.
 For example, add JSON that sets the orientation, alignment, and background color of the control.
 
-![](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_prop.png)
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_prop.png)
 
 
 To specify how you want the control to interact with the report, click the UI type property.
@@ -270,7 +270,7 @@ If you do not want to render an interface, set the property to None. If you do n
 <!---
 ###  The flow of the whole process could be summed up in the following diagram
 
-![WRML_Cognos](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/images/RWML_Arch.png)
+![WRML_Cognos](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/RWML_Arch.png)
 --->
 
 With this pattern now we can avoid tedious process of invoking the watson machine learning models on the fly and get the output of those models displayed on the fly.
