@@ -256,19 +256,19 @@ eg: "c:\Program Files\IBM\cognos\analytics\webcontent\samples\javascript\wml\
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_drag.png)
 
-- Now add the properties as per the below screenshot.
+- Select the custom control and click the Show properties icon Show properties icon. To specify the location of the file that contains the JavaScript that you want to use for the control, click the Module path property. And add the other properties as per the below screenshot.To specify how you want the control to interact with the report, click the UI type property and set as `UI without event propogation`.
+```
+Note: Module path will be pointing to the javascripts files that was created for custom control.
+```
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/cc_prop.png)
 
+-  To set the full interactivity of the report, then go to Pages tab, click on `Report` as per below screenshot and set it as `Yes`. 
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/run_full_interactivity.png)
+
 -  
-Select the custom control and click the Show properties icon Show properties icon.
 
-![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_tool.png)
-
-- To specify the location of the file that contains the JavaScript that you want to use for the control, click the Module path property and to add JSON that configures the custom control, click the Configuration property.
-For example, add JSON that sets the orientation, alignment, and background color of the control.
-
-![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom_control_prop.png)
 
 
 To specify how you want the control to interact with the report, click the UI type property.
