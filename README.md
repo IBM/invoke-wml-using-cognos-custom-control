@@ -68,6 +68,7 @@ Will be uploaded shortly.
 
 * Cognos server - You can have on-prim or SaaS offering of Cognos with admin access.
  > Note: Cognos version should be over 11.0.05.
+ 
 
 * IBM Cloud account: You must have IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, please create an account [here](https://console.bluemix.net/)
 
