@@ -73,26 +73,31 @@ Will be uploaded shortly.
 
 ## Steps
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
-1. [Create a new Watson Studio project](#1-create-a-new-watson-studio-project) 
-2. [Create watson machine learning model](#2-create-watson-machine-learning-model)
-3. [Get WML Credentials and model API code](#3-get-wml-credentials-and-model-api-code)
-4. [Host the WML model through node application](#4-host-the-wml-model-through-node-application)
-5. [Create custom control widgets](#5-create-custom-control-widgets)
-6. [Build cognos report using custom widget](#6-build-cognos-report-and-import-custom-widget)
-7. [Run the report and Analyse the results](#7-analyse-the-invoked-machine-learning-model) 
+
+1. [Create watson machine learning model](#2-create-watson-machine-learning-model)
+2. [Get WML Credentials and model API code](#3-get-wml-credentials-and-model-api-code)
+3. [Host the WML model through node application](#4-host-the-wml-model-through-node-application)
+4. [Create custom control widgets](#5-create-custom-control-widgets)
+5. [Build cognos report using custom widget](#6-build-cognos-report-and-import-custom-widget)
+6. [Run the report and Analyse the results](#7-analyse-the-invoked-machine-learning-model) 
 
 
 
-### 2. Create watson machine learning model from Watson Studio
+### 1. Create watson machine learning model from Watson Studio
 
-- [Launch watson studio](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data – all in a flexible, hybrid cloud environment.
+- [Create watson studio](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data – all in a flexible, hybrid cloud environment.
 
-Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
+* Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
 
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/WatsonStudioCreate.png)
 
 By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Choose the storage type as Cloud Object Storage for this code pattern.
+
+* Click on ```Get started``` button to launch watson studio
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/WS_GetStarted.png)
+
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/launch_WS.png)
 
