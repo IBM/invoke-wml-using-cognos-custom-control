@@ -86,7 +86,7 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 ### 1. Create watson machine learning model from Watson Studio
 
-[Create watson studio](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data. All in a flexible, hybrid cloud environment.
+[Create watson studio service](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data. All in a flexible, hybrid cloud environment.
 
 - Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
 
