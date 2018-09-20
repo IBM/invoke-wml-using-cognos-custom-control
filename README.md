@@ -234,9 +234,14 @@ eg: "c:\Program Files\IBM\cognos\analytics\webcontent\samples\javascript\wml\
 
 - Click on ```+ New button``` to upload the `Telco-Customoer-Churn` data set to cognos server. See screenshot for details.
 
-![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/uploadcsv.png
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/uploadcsv.png)
 
-Browse to upload the [Telco-customer-churn]() csv file which you have downloaded to your local system
+- Browse to upload the [Telco-customer-churn](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/data/Telco-Customer-Churn.csv) csv file which you would have downloaded to your local system.
+
+- After uploading the csv file, go to `Team Content` tab and navigate to sample>Data folder and select the recently uploaded data set and create a report using the same. See below screenshot for reference.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/createreport.png)
+
 
 - Click on ```+ New button``` to open a new report studio report.
 
