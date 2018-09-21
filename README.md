@@ -118,7 +118,7 @@ By creating a project in Watson Studio a free tier ``Object Storage`` service wi
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
 
-- We have used sample model for this pattern, select model type as 'sample model' radio button and pick watson machine learning model to predict customer churn.
+- We have used sample model for this pattern, select model type as 'sample model' radio button and pick spss built `Customer Satisfaction Prediction` model.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
 
