@@ -1,5 +1,5 @@
-# Invoke Watson Machine Learning Model and Display model output at run time on Cognos Dashboard
-***Work In Progress***
+# Real Time Prediction of Telco Customer Churn using Watson Machine Learning from Cognos Dashboard
+
 
 Cognos 11 is not only positioned towards the professional report author but specifically towards power users and data scientists by offering Watson-like features such as natural language search and automatic proposal of charts. Now with all these latest features in cognos, interacting or communicating with cloud hosted services is also possible from the cognos application.
 
@@ -50,13 +50,13 @@ When the reader has completed this code pattern, one will be able to:
 
 * [d3js](https://d3js.org/) - Develop charts like pie, bar, or some fancy charts sunburst etc which can later be imported to cognos application.
 
-* Cognos BI server - On Prim version of Cognos or SaaS offering.
+* [Cognos BI server](https://public.dhe.ibm.com/software/data/sw-library/analytics/smart-papers/cognos-analytics/) - On Prim version of Cognos or SaaS offering.
 
 ## Featured Technologies
  
 * [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
 
-* [Watson Analytics](https://www.ibm.com/watson-analytics)
+* [Watson Analytics](https://www.ibm.com/watson-analytics): Analytics in minutes. Data analysis and visualization built for you. Analyze your data easily and on your own without downloading software. Watson Analytics continues to bring new information to our attention — we can detect patterns in cost and efficiency in our data that we never recognised before.
 
 * [Business intelligence (BI)](https://www.gartner.com/it-glossary/business-intelligence-bi/) is a technology-driven process for analyzing data and presenting actionable information to help executives, managers and other corporate end users make informed business decisions.
 
@@ -68,24 +68,25 @@ Will be uploaded shortly.
 
 * Cognos server - You can have on-prim or SaaS offering of Cognos with admin access.
  > Note: Cognos version should be over 11.0.05.
+ 
 
-* IBM Cloud account: You must have IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, please create an account [here](https://console.bluemix.net/)
+* [IBM Cloud account](https://console.bluemix.net/): You must have IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, please create an account [here](https://console.bluemix.net/)
 
 ## Steps
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
 
-1. [Create watson machine learning model](#2-create-watson-machine-learning-model)
-2. [Get WML Credentials and model API code](#3-get-wml-credentials-and-model-api-code)
-3. [Host the WML model through node application](#4-host-the-wml-model-through-node-application)
-4. [Create custom control widgets](#5-create-custom-control-widgets)
-5. [Build cognos report using custom widget](#6-build-cognos-report-and-import-custom-widget)
-6. [Run the report and Analyse the results](#7-analyse-the-invoked-machine-learning-model) 
+1. [Create Watson Machine Learning model from Watson Studio](#1-create-watson-machine-learning-model-from-watson-studio)
+2. [Get WML Credentials and model API code](#2-get-wml-credentials-and-model-api-code)
+3. [Host the WML model through node application](#3-host-the-wml-model-through-node-application)
+4. [Create custom control widgets](#4-create-custom-control-widgets)
+5. [Build cognos report using custom widget](#5-build-cognos-report-using-custom-widget)
+6. [Run the report and Analyse the results](#6-run-the-report-and-analyse-the-results) 
 
 
 
 ### 1. Create watson machine learning model from Watson Studio
 
-[Create watson studio](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data. All in a flexible, hybrid cloud environment.
+[Create watson studio service](https://console.bluemix.net/catalog/services/watson-studio): IBM Watson Studio can Build and train AI & machine learning models, prepare and analyze data. All in a flexible, hybrid cloud environment.
 
 - Click on ```Create``` button by selecting Lite Pricing plan. See below screenshot.
 
@@ -113,16 +114,22 @@ By creating a project in Watson Studio a free tier ``Object Storage`` service wi
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/WS_Assets.png)
 
-- Under modeler flow click on new model, create a watson machine learning model to predict customer churn.
+- Under `modeler flow` click on `new flow` to create a watson machine learning model to predict customer churn.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
 
-- We have used sample model for this pattern, select model type as 'sample model' radio button
+- We have used sample model for this pattern, select model type as 'sample model' radio button and pick spss built `Customer Satisfaction Prediction` model.
+
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
 
 - You created and saved the model. It's time to deploy it. From the deployment tab, click on 'Add to deployment' and select deployment type as 'web service'.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/add_to_deploy.png)
+
+- From the same deployments tab, click on the deployed model which will navigate you to code snippet page and under implementation tab, Copy the code snippet of JavaScript which will be used in the app.js file in the next section.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/CodeSnippet_js.png)
+
 
 ### 2. Get WML Credentials and model API code
 
@@ -163,9 +170,6 @@ Sample credentials as follows:
   "username": "7ab12e8-xxx-yyyy-xxxx-123456789
 }
 ```
-
-
-
 
 
 ### 3. Host the WML model through node application
@@ -210,9 +214,9 @@ In this repository, custom control code is available at `<code location with fil
   
 Here, please write the name of your node application deployed in previous step. For example, `aaa-bbb.mybluemix.net`
 
-### 5. Build cognos report and import custom widget
+### 5. Build cognos report using custom widget
 
-- Place the custom widget related java script files [report.js](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/src/report.js) and [report.css](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/blob/master/src/report.css) in the cognos installation webcontent directory.
+- Place the custom widget related java script files [report.js](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/custom-control-code/report.js) and [report.css](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master/custom-control-code/report.css) in the cognos installation webcontent directory.
 
 Path as follows
 ```
@@ -274,39 +278,39 @@ Note: Module path will be pointing to the javascripts files that was created for
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/rave_viz.png)
 
-- save and run the report.
+- save the report under Team Content or My content by creating a folder and name it as `Invoking Watson Machine Learning Model from Cognos Dashboard`.
 
 
-### 6. Analyse the invoked machine learning model
+### 6. Run the report and Analyse the results
 
-- In order for you to get get the output of the watson machine learning model, all you have to do is just fill the form with required input parameters and click on submit button.
-```Screenshot```
+From cognos report, you can view insights of the Telecom data set and along with that we can now dynamically invoke the machine learning model and get the scores or results instantly. 
+
+- Run the saved report in `html` format ONLY. See screenshot for reference.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/run_report.png)
+
+- In order for you to get the output of the watson machine learning model, fill the form with required input parameters and click on submit button to get the results of the WML model. See screen shot for reference.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/form_wml.png)
 
 - Cognos will notify you saying ```Invoking watson machine learning model```. Click on ok.
-```screenshot```
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/invoke_popup.png)
+
 
 - At run time, along with the input form you will now see the output of the watson machine from cognos application itself.
-```screenshot```
 
-- From the one single cognos dashboard, now we will be able to see the insights of the data through dataware house and along with that we can now do predictions by invoking dynamically watson machine learning models and display the output if the model on the dashboard.
-
-```screenshot```
-
-- For the data that we passed in this scenario, we could see that the customer is most likey to churn based on the input parameters. 66% chances that this customer is likely to churn.
-
-```screenshot```
-
-- 
-
-<!---
-###  The flow of the whole process could be summed up in the following diagram
-
-![WRML_Cognos](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/RWML_Arch.png)
---->
-
-With this pattern now we can avoid tedious process of invoking the watson machine learning models on the fly and get the output of those models displayed on the fly.
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/output_wml.png)
 
 
+- From the one single cognos dashboard, now we will be able to see the insights of the data through dataware house and along with that we can now do predictions by invoking dynamically watson machine learning models and display the output if the model on the dashboard. For the data that we passed in this scenario, we could see that the customer is most likey to churn based on the input parameters. Chances are high that this customer is likely to churn. So, the telco subscriber can now offer some good deals to that particular or set of customers who fall in the same category and try to retain them in future.
+Overall output of the report will look as below screen shot.
+
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/Report_Output.png)
+
+
+With this pattern now we can avoid tedious process of invoking the watson machine learning models at real time and get the output of those models displayed on the fly.
 
 
 
