@@ -126,6 +126,11 @@ By creating a project in Watson Studio a free tier ``Object Storage`` service wi
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/add_to_deploy.png)
 
+- From the same deployments tab, click on the deployed model which will navigate you to code snippet page and under implementation tab, Copy the code snippet of JavaScript which will be used in the app.js file in the next section.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/CodeSnippet_js.png)
+
+
 ### 2. Get WML Credentials and model API code
 
 - Once deployment completed, Copy the watson machine learning credentials:
