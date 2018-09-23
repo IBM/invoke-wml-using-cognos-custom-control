@@ -1,5 +1,5 @@
-# Invoke Watson Machine Learning Model and Display model output at run time on Cognos Dashboard
-***Work In Progress***
+# Real Time Prediction of Telco Customer Churn using Watson Machine Learning from Cognos Dashboard
+
 
 Cognos 11 is not only positioned towards the professional report author but specifically towards power users and data scientists by offering Watson-like features such as natural language search and automatic proposal of charts. Now with all these latest features in Cognos, interacting or communicating with cloud hosted services is also possible from the Cognos application.
 
@@ -50,13 +50,13 @@ When the reader has completed this code pattern, one will be able to:
 
 * [d3js](https://d3js.org/) - Develop charts like pie, bar, or some fancy charts sunburst etc which can later be imported to Cognos application.
 
-* Cognos BI server - On-Prim version of Cognos or SaaS offering.
+* Cognos BI server(https://public.dhe.ibm.com/software/data/sw-library/analytics/smart-papers/cognos-analytics/) - On-Prim version of Cognos or SaaS offering.
 
 ## Featured Technologies
  
 * [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
 
-* [Watson Analytics](https://www.ibm.com/watson-analytics)
+* [Watson Analytics](https://www.ibm.com/watson-analytics): Analytics in minutes. Data analysis and visualization built for you. Analyze your data easily and on your own without downloading software. Watson Analytics continues to bring new information to our attention — we can detect patterns in cost and efficiency in our data that we never recognised before.
 
 * [Business intelligence (BI)](https://www.gartner.com/it-glossary/business-intelligence-bi/) is a technology-driven process for analyzing data and presenting actionable information to help executives, managers and other corporate end users make informed business decisions.
 
@@ -70,12 +70,12 @@ Will be uploaded shortly.
  > Note: Cognos version should be over 11.0.05.
  
 
-* IBM Cloud account: You must have IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, please create an account [here](https://console.bluemix.net/)
+* [IBM Cloud account](https://console.bluemix.net/): You must have IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, please create an account [here](https://console.bluemix.net/)
 
 ## Steps
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
 
-1. [Create Watson Machine Learning model from Watson Studio](#2-create-watson-machine-learning-model-from-watson-studio)
+1. [Create Watson Machine Learning model from Watson Studio](#1-create-watson-machine-learning-model-from-watson-studio)
 2. [Get WML Credentials and model API code](#2-get-wml-credentials-and-model-api-code)
 3. [Host the WML model through node application](#3-host-the-wml-model-through-node-application)
 4. [Create custom control widgets](#4-create-custom-control-widgets)
@@ -118,12 +118,18 @@ By creating a project in Watson Studio a free tier ``Object Storage`` service wi
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
 
-- We have used sample model for this pattern, select model type as ```sample model``` radio button
+- We have used sample model for this pattern, select model type as ```sample model``` radio button and pick spss built `Customer Satisfaction Prediction` model.
+
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
 
 - You created and saved the model. It's time to deploy it. From the deployment tab, click on ```Add to deployment``` and select deployment type as ```web service```.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/add_to_deploy.png)
+
+- From the same deployments tab, click on the deployed model which will navigate you to code snippet page and under implementation tab, Copy the code snippet of JavaScript which will be used in the app.js file in the next section.
+
+![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/CodeSnippet_js.png)
+
 
 ### 2. Get WML Credentials and model API code
 
