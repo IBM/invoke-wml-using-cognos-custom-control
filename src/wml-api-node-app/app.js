@@ -27,9 +27,9 @@ app.use('/users', usersRouter);
 //WML API Code Starts
 
 // WML Model Details
-var wml_service_credentials_url = "https://eu-gb.ml.cloud.ibm.com";
-var wml_service_credentials_username = "76ef91e8-61ba-49b0-914b-1d489bc99ef8";
-var wml_service_credentials_password = "eb3395a4-9ed8-4602-bf6f-ba5409ced76c";
+var wml_service_credentials_url = "";
+var wml_service_credentials_username = "";
+var wml_service_credentials_password = "";
 
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const btoa = require("btoa");
@@ -82,7 +82,7 @@ function predictScore(payload) {
             const token = parsedGetResponse.token
             const wmlToken = "Bearer " + token;
 
-			const scoring_url = "https://eu-gb.ml.cloud.ibm.com/v3/wml_instances/5bede663-c2a6-4c76-9b3a-1a5dbe503258/deployments/7ecb0ba7-8bc3-4462-8154-156f90a9b794/online";
+	    const scoring_url = "";
 
             apiPost(scoring_url, wmlToken, payload, function (resp) {
                 let parsedPostResponse;
