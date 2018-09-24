@@ -266,6 +266,10 @@ Note: Module path will be pointing to the javascripts files that was created for
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/run_full_interactivity.png)
 
+```
+Note: The below steps are optional. If you wish to skip then save the report go to step 6 which is `Run the report and Analyse the results`.
+```
+
 -  Go to report page again, add a list object to the report and then add required fields to the list. See below screenshot for reference. 
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/SampleList.png)
