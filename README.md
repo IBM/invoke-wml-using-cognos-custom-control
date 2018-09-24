@@ -62,7 +62,8 @@ When the reader has completed this code pattern, one will be able to:
 
 ## Watch The Video
 
-[Demo](https://youtu.be/GZ-NV_ZxtTs)
+[![](http://img.youtube.com/vi/GZ-NV_ZxtTs/0.jpg)](https://youtu.be/GZ-NV_ZxtTs)]
+
 
 ## Pre-requisites
 
