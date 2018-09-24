@@ -30,7 +30,7 @@ When the reader has completed this code pattern, one will be able to:
 
 ![WRML_Cognos](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/RWML_Arch.png)
 
-1. Create the custom control widget using JavaScript.
+1. Create the custom control widget using JavaScript and place it Cognos webcontent folder.
 2. Create Watson Machine Learning Model and deploy as web service.
 3. Launch Cognos on web browser.
 4. Create the Cognos report using Custom Control and run the report.
