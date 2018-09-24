@@ -62,7 +62,7 @@ When the reader has completed this code pattern, one will be able to:
 
 ## Watch The Video
 
-Will be uploaded shortly.
+[Demo](https://youtu.be/GZ-NV_ZxtTs)
 
 ## Pre-requisites
 
