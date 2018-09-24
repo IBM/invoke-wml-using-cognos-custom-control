@@ -212,7 +212,8 @@ Here, copy the URL of your node application deployed in previous step.
 
 ### 5. Build Cognos report and import custom control widget
 
-- Place the custom widget related javaScript files [report.js](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/custom-control-code/report.js) and [report.css](https://github.com/srikanthIBM/invoke-wml-using-cognos-custom-control/custom-control-code/report.css) in the Cognos installation webcontent directory.
+- Place the custom widget related javaScript files [report.js](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/custom-control-code/report1.js) and [report.css](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/custom-control-code/report.css) in the Cognos installation webcontent directory.
+
 
 Path as follows
 ```
