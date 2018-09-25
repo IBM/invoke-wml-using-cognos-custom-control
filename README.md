@@ -136,11 +136,11 @@ Once deployment is completed, need to copy the Watson Machine Learning credentia
 ```Option 1: From Watson Studio```
 
  * From the `Services` menu in the top menu bar of Watson Studio, choose ```Watson Services```.
- * In the Machine Learning section, select ```Manage in IBM Cloud```.
  * Choose the `ACTIONS` menu beside the service instance for which you want to retrieve credentials. This opens the service details page for the Watson Machine Learning service instance.
+ * In the Machine Learning section, select ```Manage in IBM Cloud```.
  * Click on ```Service credentials```.
  * If there are no service credentials yet, click the ```New credential``` button.
- * Under the `ACTION` menu, click ```View credentials```.
+ * Under the `ACTIONS` menu, click ```View credentials```.
 
  
  ```Option 2: From IBM Cloud```
@@ -149,7 +149,7 @@ Once deployment is completed, need to copy the Watson Machine Learning credentia
  * In your IBM Cloud dashboard, click on the ```Watson Machine Learning``` service instance for which you want to retrieve credentials. This opens the service details page for the Watson Machine Learning service instance.
  * Click on ```Service credentials```.
  * If there are no service credentials yet, click the ```New credential``` button.
- * Under the `ACTION` menu, click ```View credentials```.
+ * Under the `ACTIONS` menu, click ```View credentials```.
 
 Sample credentials as follows:
   ```
@@ -205,7 +205,7 @@ Create the custom control widget using Javascript. The custom control developed 
   * API sends response back to custom control in Cognos.
   * parses the output (confidence score) and display as a d3 pie chart on Cognos Dashboard. 
 
-In this repository, custom control code is available at `./custom-control-code`. Update the URL in `js file` as shown and save the file.
+In this repository, custom control code is available at `./custom-control-code`. Update the URL in `report1.js ` file as shown and save the file.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/custom-control-API.png)
   
@@ -213,7 +213,7 @@ Here, copy the URL of your node application deployed in previous step.
 
 ### 5. Build Cognos report and import custom control widget
 
-- Place the custom widget related javaScript files [report.js](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/custom-control-code/report1.js) and [report.css](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/custom-control-code/report.css) in the Cognos installation webcontent directory.
+- Place the custom widget related javaScript files [report1.js](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/custom-control-code/report1.js) and [report.css](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/custom-control-code/report.css) in the Cognos installation webcontent directory.
 
 
 Path as follows
