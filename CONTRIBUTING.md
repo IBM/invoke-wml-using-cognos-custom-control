@@ -1,6 +1,6 @@
 # Contributing
 
-This is an open source project, and we appreciate your help!
+This is an open source project, and we appreciate your help!!
 
 We use the GitHub issue tracker to discuss new features and non-trivial bugs.
 
