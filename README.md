@@ -70,7 +70,9 @@ When the reader has completed this code pattern, one will be able to:
 * Cognos server - Have on-prim or SaaS offering of Cognos with `admin access`.
    > Note: Cognos version should be over 11.0.05.
  
-* [IBM Cloud account](https://console.bluemix.net/): You must have an IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, please create an account [here](https://console.bluemix.net/)
+* [IBM Cloud account](https://console.bluemix.net/): You must have an IBM Cloud account to work with this code pattern. If you do not have an IBM Cloud account, please create an account [here](https://console.bluemix.net/).
+
+* [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use): IBM Cloud CLI provides the command line interface for managing resources in IBM Cloud. 
 
 ## Steps
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
@@ -175,11 +177,16 @@ Copy the credentials, it will be used later.
 
 As shown in previous step, we have got the Javascript implementation of WML Model API. To avoid CORS error, we deployed WML model API as a nodejs application. [Node application code](https://github.com/IBM/invoke-wml-using-cognos-custom-control/tree/master-sm/src/wml-api-node-app) is available at `src/wml-api-node-app`. Perform the following steps to deploy this node application.
 
- * Get the code
+ * Clone the repo.
+   ```
+   git clone https://github.com/IBM/invoke-wml-using-cognos-custom-control.git
+   ```
+   
  * Change the directory.
    ``` 
-   cd wml-api-node-app
+   cd invoke-wml-using-cognos-custom-control/src/wml-api-node-app
    ```
+   
  * Update the `WML credentials` in `app.js`. Use the credentials obtained in step2.
    ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/wml-credentials-appjs.png)
    
@@ -187,11 +194,12 @@ As shown in previous step, we have got the Javascript implementation of WML Mode
  
    ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/scoring-url-appjs.png)
    
- * Push the application on IBM Cloud.
+ * Push the application on IBM Cloud. Before running the following command, please make sure you are logged-in to IBM Cloud using cli and able to run commands. For more information, refer this [link](https://console.bluemix.net/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_cli).
+ 
    ```
-   bx cf push <unique name of application>
+   ibmcloud cf push <unique name of application>
    ```
- * Get the deployed application URL. URL will be used in next step.
+ * Get the deployed application URL. URL will be ```https://<name of application>.mybluemix.net```. This URL will be used in next step.
  
    ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/app-url-node.png)
  
