@@ -119,7 +119,7 @@ By creating a project in Watson Studio a free tier ``Object Storage`` service wi
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/modeller.png)
 
-- We have used sample model for this pattern, select model type as ```From sample``` radio button and choose SPSS built `Customer Satisfaction Prediction` model as shown.
+- We have used sample model for this pattern, select model type as ```From sample``` radio button and choose built Machine Learning `Customer Satisfaction Prediction` model as shown and provide appropriate model name.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/sample_wml_model.png)
 
@@ -268,6 +268,7 @@ eg: "c:\Program Files\IBM\cognos\analytics\webcontent\samples\javascript\wml\
 - Select the custom control and click the `Show properties` icon. To specify the location of the file that contains the JavaScript that you want to use for the control, click the `Module path` property. And add the other properties as per the below screenshot. To specify how you want the control to interact with the report, click the UI type property and set as `UI without event propagation`.
 ```
 Note: Module path will be pointing to the javascripts files that was created for custom control.
+eg: /samples/javascript/wml/report1.js
 ```
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/cc_prop.png)
