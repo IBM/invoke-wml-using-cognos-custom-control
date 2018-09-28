@@ -6,6 +6,9 @@ Cognos 11 is not only positioned towards the professional report author but spec
 It was always a tedious task to display a real time Watson Machine Learning (WML) model output from Cognos application. 
 To achieve that, we need to have an external mechanism to invoke the model, pass the required input parameters and finally the scores are written back to the database. Cognos reads the latest scores from the database and displays on the dashboard.
 
+Cognos dashboard traditionally display’s content from descriptive Analytics. As adoption of predictive analytics in the surge it more makes sense to bring in the Descriptive as well as Predictive content to same plane.
+Things like invoking an ML model or scoring real-time. Through Watson Machine learning API, you will be able to access a model across a different platform be it Spark, R, Python or the IBM’s Proprietary Library SPSS. 
+
 The latest version of Cognos comes with Custom control feature. It gives the capability to create a real time dashboard where we can pass the inputs through a custom widget which internally invokes the model through REST API, gets the output and displays on the dashboard.
 
 For this, one need to build a custom control using JavaScript to get inputs and to show outputs as chart/table. Then this control can be imported into Cognos dashboard and gets real time output. In this pattern, we demonstrate to build custom control, integration of the custom control in Cognos, invoke the Machine learning model from the Cognos Dashboard and show model output at run time on Cognos Dashboard.
