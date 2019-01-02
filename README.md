@@ -194,7 +194,7 @@ As shown in previous step, we have got the Javascript implementation of WML Mode
  * Update the `WML credentials` in `app.js`. Use the credentials obtained in step2.
    ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/wml-credentials-appjs.png)
    
- * Update `scoring_url` in `app.js` as shown. Get scoring URL for your model from your JavaScript code as explined in step 2. Scoring URL will looks like ```https://xxxx.ml.cloud.ibm.com/v3/wml_instances/xxxxxx/deployments/xxxyyy/online```.
+ * Update `scoring_url` in `app.js` as shown. Get scoring URL for your model from your JavaScript code as explained in step 2. Scoring URL will looks like ```https://xxxx.ml.cloud.ibm.com/v3/wml_instances/xxxxxx/deployments/xxxyyy/online```.
  
    ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/scoring-url-appjs.png)
    
@@ -305,7 +305,7 @@ From Cognos report, you can view insights of the Telecom data set and along with
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/run_report.png)
 
-- In order for you to get the output of the watson machine learning model, fill the form with required input parameters and click on `Submit` button to get the results of the WML model. See screen shot for reference.
+- In order for you to get the output of the Watson machine learning model, fill the form with required input parameters and click on `Submit` button to get the results of the WML model. See screen shot for reference.
 
 ![](https://github.com/IBM/invoke-wml-using-cognos-custom-control/blob/master/images/form_wml.png)
 
